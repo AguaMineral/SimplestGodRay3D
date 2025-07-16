@@ -25,6 +25,8 @@
 
 ## 🧪 How to Use
 
+1. Download the simplest_god_ray_3d folder from the Godot assetLib or from gitHub
+2. ⚠️**ONLY IF DOWNLOADED FROM GITHUB** In the addons folder of your project(if you don't have one, create it), paste the simplest_god_ray_3d folder
 1. Enable the addon from `Project > Project Settings > Plugins`
 2. Add a new `SimplestGodRay3D` node to your scene
 3. Adjust the exposed parameters in the Inspector:
