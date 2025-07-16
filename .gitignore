@@ -12,3 +12,6 @@ export_credentials.cfg
 
 # bak files
 *.bak
+
+# import files
+*.import
