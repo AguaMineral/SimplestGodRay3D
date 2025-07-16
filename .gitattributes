@@ -1,7 +1,9 @@
-# Auto detect text files and perform LF normalization
+# Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
 
-# Export only addon folder for Godot AssetLib
-/addons/simplest_god_ray_3d/** export-ignore=false
-/** export-ignore
-!.gitattributes
+# Only include the addons/simplest_god_ray_3d folder when downloading from the Asset Library.
+** export-ignore
+/addons !export-ignore
+/addons/* export-ignore
+/addons/simplest_god_ray_3d !export-ignore
+/addons/simplest_god_ray_3d/** !export-ignore
