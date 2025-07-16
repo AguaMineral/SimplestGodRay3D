@@ -1,0 +1,149 @@
+[gd_scene load_steps=9 format=3 uid="uid://15acwidnwjju"]
+
+[ext_resource type="Script" uid="uid://bl1xv44esn0oq" path="res://addons/simplest_god_ray_3d/simplest_god_ray_3d.gd" id="1_q8hpy"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4h2po"]
+sky_top_color = Color(0.273859, 0.42805, 0.784241, 1)
+sky_horizon_color = Color(0.62633, 0.712932, 0.766155, 1)
+ground_bottom_color = Color(0.0827001, 0.274918, 0.131618, 1)
+ground_horizon_color = Color(0.62633, 0.712932, 0.766155, 1)
+
+[sub_resource type="Sky" id="Sky_dwetn"]
+sky_material = SubResource("ProceduralSkyMaterial_4h2po")
+
+[sub_resource type="Environment" id="Environment_v6fnk"]
+background_mode = 2
+sky = SubResource("Sky_dwetn")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_xs6qu"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3pvc"]
+albedo_color = Color(0.23455, 0.601295, 0.298718, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tlngo"]
+height = 4.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d0psf"]
+albedo_color = Color(0.280571, 0.282209, 0.0928631, 1)
+
+[node name="ExampleGodRay" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_v6fnk")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.0112181, -0.64269, 0.766045, -0.0133693, 0.765928, 0.642788, -0.999848, -0.0174524, -3.34849e-08, 0, 4.57871, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.778672, 1.60026, 6.00246)
+
+[node name="Props" type="Node3D" parent="."]
+
+[node name="Floor" type="CSGMesh3D" parent="Props"]
+mesh = SubResource("BoxMesh_xs6qu")
+material = SubResource("StandardMaterial3D_n3pvc")
+
+[node name="Cylinder" type="CSGMesh3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.742399, 1.43743, 2.56503)
+mesh = SubResource("CylinderMesh_tlngo")
+material = SubResource("StandardMaterial3D_d0psf")
+
+[node name="Cylinder2" type="CSGMesh3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06505, 1.43743, 1.67613)
+mesh = SubResource("CylinderMesh_tlngo")
+material = SubResource("StandardMaterial3D_d0psf")
+
+[node name="Cylinder3" type="CSGMesh3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07726, 1.43743, 1.04324)
+mesh = SubResource("CylinderMesh_tlngo")
+material = SubResource("StandardMaterial3D_d0psf")
+
+[node name="GodRays" type="Node3D" parent="."]
+
+[node name="SimplestGodRay3D" type="Node3D" parent="GodRays"]
+transform = Transform3D(0.766044, 0.642788, 0, -0.642788, 0.766044, 0, 0, 0, 1, 1.64804, 2.31015, 2.62214)
+script = ExtResource("1_q8hpy")
+height = 7.037
+spread = 1.291
+intensity = 0.32
+metadata/_custom_type_script = "uid://bl1xv44esn0oq"
+
+[node name="SimplestGodRay3D7" type="Node3D" parent="GodRays"]
+transform = Transform3D(0.766044, 0.642788, 0, -0.642788, 0.766044, 0, 0, 0, 1, 4.61537, 2.31015, 2.62214)
+script = ExtResource("1_q8hpy")
+height = 7.037
+spread = 1.291
+intensity = 0.32
+metadata/_custom_type_script = "uid://bl1xv44esn0oq"
+
+[node name="SimplestGodRay3D6" type="Node3D" parent="GodRays"]
+transform = Transform3D(0.74615, 0.665778, 0, -0.665778, 0.74615, 0, 0, 0, 1, -3.59855, 2.31015, 2.62214)
+script = ExtResource("1_q8hpy")
+height = 7.037
+spread = 1.291
+intensity = 0.32
+metadata/_custom_type_script = "uid://bl1xv44esn0oq"
+
+[node name="SimplestGodRay3D2" type="Node3D" parent="GodRays"]
+transform = Transform3D(0.766044, 0.642788, 0, -0.642788, 0.766044, 0, 0, 0, 1, -0.877513, 2.31015, 2.19362)
+script = ExtResource("1_q8hpy")
+width = 0.231
+height = 8.397
+spread = 1.291
+intensity = 0.126
+fade_distance = 1.577
+metadata/_custom_type_script = "uid://bl1xv44esn0oq"
+
+[node name="SimplestGodRay3D3" type="Node3D" parent="GodRays"]
+transform = Transform3D(0.766044, 0.642788, 0, -0.642788, 0.766044, 0, 0, 0, 1, 0.843637, 3.45755, 3.26703)
+script = ExtResource("1_q8hpy")
+width = 0.423
+height = 4.36
+spread = 1.291
+intensity = 0.126
+fade_distance = 1.577
+metadata/_custom_type_script = "uid://bl1xv44esn0oq"
+
+[node name="SimplestGodRay3D4" type="Node3D" parent="GodRays"]
+transform = Transform3D(0.766044, 0.642788, 0, -0.642788, 0.766044, 0, 0, 0, 1, -0.442819, 3.84904, 3.26703)
+script = ExtResource("1_q8hpy")
+width = 0.423
+height = 2.918
+spread = 1.291
+intensity = 0.126
+fade_distance = 1.577
+metadata/_custom_type_script = "uid://bl1xv44esn0oq"
+
+[node name="SimplestGodRay3D8" type="Node3D" parent="GodRays"]
+transform = Transform3D(0.766044, 0.642788, 0, -0.642788, 0.766044, 0, 0, 0, 1, -0.870465, 4.13141, 0.83369)
+script = ExtResource("1_q8hpy")
+width = 0.423
+height = 4.936
+spread = 1.145
+intensity = 0.316
+fade_distance = 1.577
+metadata/_custom_type_script = "uid://bl1xv44esn0oq"
+
+[node name="SimplestGodRay3D9" type="Node3D" parent="GodRays"]
+transform = Transform3D(0.766044, 0.642788, 0, -0.642788, 0.766044, 0, 0, 0, 1, -1.5565, 3.84904, 4.78595)
+script = ExtResource("1_q8hpy")
+width = 0.423
+height = 2.918
+spread = 1.291
+intensity = 0.126
+fade_distance = 1.577
+metadata/_custom_type_script = "uid://bl1xv44esn0oq"
+
+[node name="SimplestGodRay3D5" type="Node3D" parent="GodRays"]
+transform = Transform3D(0.766044, 0.642788, 0, -0.642788, 0.766044, 0, 0, 0, 1, 3.64888, 3.84904, 2.68236)
+script = ExtResource("1_q8hpy")
+width = 0.423
+height = 2.918
+spread = 1.291
+intensity = 0.126
+fade_distance = 1.577
+metadata/_custom_type_script = "uid://bl1xv44esn0oq"
