@@ -45,11 +45,26 @@
 - Transparent overlap artifacts may occur when multiple beams cross or when mixed with other alpha-based geometry (like Sprite3D).
 - Not physically accurate — this is a stylized, artistic effect, so it does not interact with the geometry of the scene.
 
+---
+
+## 🔭 What's Next
+
+Planned improvements for future versions of **SimplestGodRay3D**:
+
+- **✨ Dust Particles**
+  - Add optional projected dust motes inside the god ray.
+
+- **🌫️ Embedded Fog Layer**
+  - Add support for internal fog/brume projection inside the god ray to simulate light scattering in humid or dense air.
+
+---
 
 ## ✨ Author
 
 Developed by Re_Lo.  
 If you use this in a project, feel free to share it with me!
+
+---
 
 ## 📄 License
 
