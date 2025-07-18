@@ -43,6 +43,7 @@
 - No dynamic shadows.
 - Transparent overlap artifacts may occur when multiple beams cross or when mixed with other alpha-based geometry (like Sprite3D).
 - Not physically accurate — this is a stylized, artistic effect, so it does not interact with the geometry of the scene.
+- You will have to be really careful positioning the god ray meshes if your camera can move freely, this addon is better suited for fixed view cameras like top down, side-scrolling...
 
 ---
 
