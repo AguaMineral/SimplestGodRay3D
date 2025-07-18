@@ -34,7 +34,6 @@
    - `spread`: controls the trapezoidal shape
    - `intensity`, `transparency`: affects color and opacity
    - `fade_distance`: controls fade-out over distance
-   - `use_occlusion`: enables or disables automatic cut-off with scene geometry using the depth buffer
    - `visibility_layers`: limit visibility to selected cameras
 
 ---
